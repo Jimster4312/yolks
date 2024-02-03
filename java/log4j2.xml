@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<RollingRandomAccessFile name="StatsFile" fileName="logs/latest.log" filePattern="logs/%d{yyyy-MM-dd-HH}{GMT}-%i.log.gz">
+<RollingRandomAccessFile name="StatsFile" fileName="logs/StatsFile-latest.log" filePattern="logs/%d{yyyy-MM-dd-HH}{GMT}-%i.log.gz">
 <PatternLayout pattern="%d{yyyy/MM/dd HH:mm:ss}{GMT}%msg%n" />
 <Policies>
 	<TimeBasedTriggeringPolicy />
