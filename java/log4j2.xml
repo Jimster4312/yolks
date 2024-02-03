@@ -1,11 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<RollingRandomAccessFile name="StatsFile" fileName="logs/StatsFile-latest.log" filePattern="logs/%d{yyyy-MM-dd-HH}{GMT}-%i.log.gz">
-<PatternLayout pattern="%d{yyyy/MM/dd HH:mm:ss}{GMT}%msg%n" />
-<Policies>
-	<TimeBasedTriggeringPolicy />
-	<OnStartupTriggeringPolicy />
-</Policies>
-</RollingRandomAccessFile>
 <Configuration status="WARN" packages="org.apache.logging.log4j.core">
     <Appenders>
         <Console name="ConsoleAppender" target="SYSTEM_OUT">
