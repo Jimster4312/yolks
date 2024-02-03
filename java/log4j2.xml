@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Configuration status="WARN" packages="org.apache.logging.log4j.core">
+<Configuration status="WARN">
     <Appenders>
         <Console name="ConsoleAppender" target="SYSTEM_OUT">
             <PatternLayout>
-                <Pattern>
-                    %style{%d{HH:mm:ss}}{white} %style{[SERVER]}{cyan} %msg%n
-                </Pattern>
+                <Pattern>%d{HH:mm:ss} [SERVER] %msg%n</Pattern>
             </PatternLayout>
         </Console>
+        <File name="FileAppender" fileName="logs/latest.log">
+            <PatternLayout>
+                <Pattern>%d{HH:mm:ss} [SERVER] %msg%n</Pattern>
+            </PatternLayout>
+        </File>
     </Appenders>
     <Loggers>
         <Root level="info">
             <AppenderRef ref="ConsoleAppender"/>
+            <AppenderRef ref="FileAppender"/>
         </Root>
     </Loggers>
 </Configuration>
