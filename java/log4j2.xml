@@ -7,7 +7,9 @@
             </PatternLayout>
         </Console>
         <RollingRandomAccessFile name="FileAppender" fileName="logs/latest.log" filePattern="logs/%d{yyyy-MM-dd-HH}{GMT}-%i.log.gz">
-			<PatternLayout pattern="%d{HH:mm:ss} [SERVER] %msg%n" />
+			<PatternLayout>
+                <Pattern>%d{HH:mm:ss} [SERVER] %msg%n</Pattern>
+            </PatternLayout>
 				<Policies>
 					<TimeBasedTriggeringPolicy />
 					<OnStartupTriggeringPolicy />
