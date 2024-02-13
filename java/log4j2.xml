@@ -3,7 +3,7 @@
     <Appenders>
         <Console name="ConsoleAppender" target="SYSTEM_OUT">
             <PatternLayout>
-                <Pattern>%style{%d{HH:mm:ss}}{white} %style{[SERVER]}{cyan} %msg%n</Pattern>
+                <Pattern>%style{%d{HH:mm:ss}}{gray} %style{[SERVER]}{cyan} %msg%n</Pattern>
             </PatternLayout>
         </Console>
         <RollingRandomAccessFile name="FileAppender" fileName="logs/latest.log" filePattern="logs/%d{yyyy-MM-dd-HH}{GMT}-%i.log.gz">
