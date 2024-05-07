@@ -6,7 +6,7 @@
                 <Pattern>%style{%d{HH:mm:ss}}{white} %style{[SERVER]}{cyan} %msg%n</Pattern>
             </PatternLayout>
         </Console>
-        <RollingRandomAccessFile name="FileAppender" fileName="logs/latest.log" filePattern="logs/%d{yyyy-MM-dd-HH}{GMT}-%i.log.gz">
+        <RollingRandomAccessFile name="FileCreator" fileName="logs/latest.log" filePattern="logs/%d{yyyy-MM-dd-HH}{GMT}-%i.log.gz">
 			<PatternLayout>
                 <Pattern>%d{HH:mm:ss} [SERVER] %msg%n</Pattern>
             </PatternLayout>
@@ -19,7 +19,7 @@
     <Loggers>
         <Root level="info">
             <AppenderRef ref="ConsoleAppender"/>
-            <AppenderRef ref="FileAppender"/>
+            <AppenderRef ref="FileCreator"/>
         </Root>
     </Loggers>
 </Configuration>
